@@ -13,7 +13,12 @@ public class Solver {
         System.out.println("minHeight=" + minHeight + ", maxHeight=" + maxHeight + ", minWidth=" + minWidth + ", MaxWidth=" + maxWidth);
 
         //choose horizontal or vertical
-        int n = rand.nextInt(2);
+        //int n = rand.nextInt(2);
+        int n=1;
+        if(maxHeight-minHeight < maxWidth-minWidth) {
+            n=0;
+        }
+
         if(n==1) {      //if n==0, draw horizontal line;
             int wallLocation=minHeight+rand.nextInt((arrHeight-2)/2)*2+2;     //choose random line to build horizontal walls
             System.out.println("H wall is:" + wallLocation);
